@@ -19,6 +19,7 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 0.46,
+      key: "1",
     },
     {
       name: "Twitch",
@@ -37,6 +38,7 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 0.55,
+      key: "2",
     },
     {
       name: "Twitter",
@@ -54,6 +56,7 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 0.6,
+      key: "3",
     },
     {
       name: "LinkedIn",
@@ -71,6 +74,7 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 0.71,
+      key: "4",
     },
     {
       name: "Facebook",
@@ -88,8 +92,9 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 0.79,
+      key: "5",
     },
-    { name: "Snapchat", logo: "", minutes: 0, emission: 0.87 },
+    { name: "Snapchat", logo: "", minutes: 0, emission: 0.87, key: "6" },
     {
       name: "Instagram",
       logo: (
@@ -106,20 +111,18 @@ export default function Home() {
       ),
       minutes: 0,
       emission: 1.05,
+      key: "7",
     },
-    { name: "Pinterest", logo: "", minutes: 0, emission: 1.3 },
-    { name: "Reddit", logo: "", minutes: 0, emission: 2.48 },
-    { name: "TikTok", logo: "", minutes: 0, emission: 2.63 },
+    { name: "Pinterest", logo: "", minutes: 0, emission: 1.3, key: "8" },
+    { name: "Reddit", logo: "", minutes: 0, emission: 2.48, key: "9" },
+    { name: "TikTok", logo: "", minutes: 0, emission: 2.63, key: "10" },
   ]);
 
-  {
-    socialMedia.map((sm) => {
-      return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key="1" />;
-    });
-  }
   return (
     <>
-      <h1>THE ULTIMATIVE SO-ME-EMISSION CALCULATOR</h1>
+      {socialMedia.map((sm) => {
+        return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
+      })}
     </>
   );
 }

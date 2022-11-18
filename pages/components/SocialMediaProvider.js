@@ -1,11 +1,10 @@
-import Image from "next/image";
+import { Range } from "react-range";
 
-function SocialMediaProvider() {
+function SocialMediaProvider(props) {
   return (
     <>
-      <Image src="" />
-      <h3>Youtube</h3>
-      <div className="slidecontainer"></div>
+      <div>{props.logo}</div>
+      <h3>{props.name}</h3>
     </>
   );
 }
