@@ -18,7 +18,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.46,
+      emission: 27.6,
       key: "1",
     },
     {
@@ -37,7 +37,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.55,
+      emission: 33,
       key: "2",
     },
     {
@@ -55,7 +55,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.6,
+      emission: 36,
       key: "3",
     },
     {
@@ -73,7 +73,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.71,
+      emission: 42.6,
       key: "4",
     },
     {
@@ -91,7 +91,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.79,
+      emission: 47.4,
       key: "5",
     },
     {
@@ -113,7 +113,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 0.87,
+      emission: 52.5,
       key: "6",
     },
     {
@@ -131,7 +131,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 1.05,
+      emission: 63,
       key: "7",
     },
     {
@@ -153,7 +153,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 1.3,
+      emission: 78,
       key: "8",
     },
     {
@@ -175,7 +175,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 2.48,
+      emission: 148.8,
       key: "9",
     },
     {
@@ -197,7 +197,7 @@ export default function Home() {
         </svg>
       ),
       minutes: 0,
-      emission: 2.63,
+      emission: 157.8,
       key: "10",
     },
   ]);
@@ -206,7 +206,13 @@ export default function Home() {
     <>
       <section className="soMeContainer">
         {socialMedia.map((sm) => {
-          return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
+          return (
+            <SocialMediaProvider
+              {...sm}
+              setSocialMedia={setSocialMedia}
+              key={sm.key}
+            />
+          );
         })}
       </section>
     </>
