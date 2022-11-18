@@ -1,8 +1,18 @@
 .some-article {
   display: flex;
   flex-direction: column;
+  background-color: rgb(122, 122, 122);
+  padding: 2rem;
 
-  .slidecontainer {
-    width: 500px;
+  .slidecontainer input {
+    width: 100%;
+  }
+
+  .article-top {
+    display: flex;
+    flex-direction: column;
+    div {
+      align-self: center;
+    }
   }
 }
