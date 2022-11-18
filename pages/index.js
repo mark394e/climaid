@@ -1,4 +1,5 @@
 import React, { useState } from "react"; // <--- import the hook
+import SocialMediaProvider from "./components/SocialMediaProvider";
 
 export default function Home() {
   const [socialMedia, setSocialMedia] = useState([
@@ -113,7 +114,7 @@ export default function Home() {
 
   {
     socialMedia.map((sm) => {
-      return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} />;
+      return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key="1" />;
     });
   }
   return (
