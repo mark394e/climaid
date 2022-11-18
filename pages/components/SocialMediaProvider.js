@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 function SocialMediaProvider() {
   return (
     <>
-      <img src=""></img>
+      <Image src="" />
       <h3>Youtube</h3>
       <div className="slidecontainer"></div>
     </>
