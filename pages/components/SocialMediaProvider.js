@@ -1,5 +1,3 @@
-import { Range } from "react-range";
-
 function SocialMediaProvider(props) {
   return (
     <>

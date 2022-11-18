@@ -8,8 +8,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-youtube"
           viewBox="0 0 16 16"
@@ -26,8 +26,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-twitch"
           viewBox="0 0 16 16"
@@ -45,8 +45,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-twitter"
           viewBox="0 0 16 16"
@@ -63,8 +63,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-linkedin"
           viewBox="0 0 16 16"
@@ -81,8 +81,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-facebook"
           viewBox="0 0 16 16"
@@ -99,8 +99,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           viewBox="0 0 3333 3333"
           shape-rendering="geometricPrecision"
           text-rendering="geometricPrecision"
@@ -120,8 +120,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           fill="currentColor"
           className="bi bi-instagram"
           viewBox="0 0 16 16"
@@ -138,8 +138,8 @@ export default function Home() {
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           shape-rendering="geometricPrecision"
           text-rendering="geometricPrecision"
           image-rendering="optimizeQuality"
@@ -160,8 +160,8 @@ export default function Home() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 3333 3333"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           shape-rendering="geometricPrecision"
           text-rendering="geometricPrecision"
           image-rendering="optimizeQuality"
@@ -181,8 +181,8 @@ export default function Home() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 3333 3333"
-          width="16"
-          height="16"
+          width="50"
+          height="50"
           shape-rendering="geometricPrecision"
           text-rendering="geometricPrecision"
           image-rendering="optimizeQuality"
@@ -200,15 +200,17 @@ export default function Home() {
 
   return (
     <>
-      {socialMedia.map((sm) => {
-        return (
-          <SocialMediaProvider
-            {...sm}
-            setSocialMedia={setSocialMedia}
-            key={sm.key}
-          />
-        );
-      })}
+      <section className="soMeContainer">
+        {socialMedia.map((sm) => {
+          return (
+            <SocialMediaProvider
+              {...sm}
+              setSocialMedia={setSocialMedia}
+              key={sm.key}
+            />
+          );
+        })}
+      </section>
     </>
   );
 }
