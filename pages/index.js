@@ -1,4 +1,5 @@
 import React, { useState } from "react"; // <--- import the hook
+import Results from "./components/Results";
 import SocialMediaProvider from "./components/SocialMediaProvider";
 
 export default function Home() {
@@ -206,14 +207,11 @@ export default function Home() {
     <>
       <section className="soMeContainer">
         {socialMedia.map((sm) => {
-          return (
-            <SocialMediaProvider
-              {...sm}
-              setSocialMedia={setSocialMedia}
-              key={sm.key}
-            />
-          );
+          return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
         })}
+      </section>
+      <section className="result-container">
+        <Results></Results>
       </section>
     </>
   );
