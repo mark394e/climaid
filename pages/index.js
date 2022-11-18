@@ -102,9 +102,9 @@ export default function Home() {
           width="50"
           height="50"
           viewBox="0 0 3333 3333"
-          shape-rendering="geometricPrecision"
-          text-rendering="geometricPrecision"
-          image-rendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          imageRendering="optimizeQuality"
           fill-rule="evenodd"
           clip-rule="evenodd"
         >
@@ -140,9 +140,9 @@ export default function Home() {
           xmlns="http://www.w3.org/2000/svg"
           width="50"
           height="50"
-          shape-rendering="geometricPrecision"
-          text-rendering="geometricPrecision"
-          image-rendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          imageRendering="optimizeQuality"
           fill-rule="evenodd"
           clip-rule="evenodd"
           viewBox="0 0 640 640"
@@ -162,9 +162,9 @@ export default function Home() {
           viewBox="0 0 3333 3333"
           width="50"
           height="50"
-          shape-rendering="geometricPrecision"
-          text-rendering="geometricPrecision"
-          image-rendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          imageRendering="optimizeQuality"
           fill-rule="evenodd"
           clip-rule="evenodd"
         >
@@ -183,9 +183,9 @@ export default function Home() {
           viewBox="0 0 3333 3333"
           width="50"
           height="50"
-          shape-rendering="geometricPrecision"
-          text-rendering="geometricPrecision"
-          image-rendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+          imageRendering="optimizeQuality"
           fill-rule="evenodd"
           clip-rule="evenodd"
         >
@@ -202,13 +202,7 @@ export default function Home() {
     <>
       <section className="soMeContainer">
         {socialMedia.map((sm) => {
-          return (
-            <SocialMediaProvider
-              {...sm}
-              setSocialMedia={setSocialMedia}
-              key={sm.key}
-            />
-          );
+          return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
         })}
       </section>
     </>
