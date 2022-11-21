@@ -21,15 +21,26 @@ function SocialMediaProvider(props) {
   // console.log(typeof +hours);
 
   return (
-    <article className="some-article">
-      <div className="article-top">
-        <div className="logo">{props.logo}</div>
-        <h3>{props.name}</h3>
+    <>
+      <div className="cloud">
+        <article className="some-article">
+          <div className="article-top">
+            <div className="logo">{props.logo}</div>
+            <h3>{props.name}</h3>
+          </div>
+          <div className="slidecontainer">
+            <input
+              onChange={handleChange}
+              type="range"
+              min="0"
+              max="24"
+              defaultValue="0"
+              step="0.5"
+            />
+          </div>
+        </article>
       </div>
-      <div className="slidecontainer">
-        <input onChange={handleChange} type="range" min="0" max="24" defaultValue="0" step="0.5" />
-      </div>
-    </article>
+    </>
   );
 }
 

@@ -3,4 +3,11 @@
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
   padding: 2rem;
+  background-color: #87ceeb;
+  button {
+    background-color: whitesmoke;
+    color: black;
+    grid-column: 3/4;
+    height: 50px;
+  }
 }
