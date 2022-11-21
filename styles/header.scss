@@ -3,7 +3,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60vh;
+  height: 400px;
 
   section {
     inline-size: 45vw;
@@ -23,12 +23,7 @@ header {
     padding-bottom: 2rem;
   }
 
-  background: rgb(135, 206, 235);
-  background: linear-gradient(
-    0deg,
-    rgba(135, 206, 235, 1) 0%,
-    rgba(244, 255, 254, 1) 100%
-  );
+  background: rgb(218, 238, 223);
   .bold {
     font-weight: bold;
   }
