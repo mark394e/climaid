@@ -19,11 +19,11 @@ function Results(props) {
       <h2>RESULT</h2>
       <div className="co2day">
         <h3>{co2.toFixed(2)} g. CO2 a day!</h3>
-        <h4>Same as...</h4>
+        <h4>In comparisson</h4>
         <p>
-          {beef.toFixed(2)} kg beef or
+          It costs {beef.toFixed(2)}kg CO2 to produce 1kg beef!
           <br />
-          {tofu.toFixed(2)} kg tofu!
+          It costs {tofu.toFixed(2)} kg CO2 to produce 1kg tofu!
         </p>
         <p>
           {dairy.toFixed(2)} L dairy milk or
