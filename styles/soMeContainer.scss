@@ -1,13 +1,14 @@
 .soMeContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #ffffff;
-  justify-content: center;
-
   h2 {
     margin-top: 15vh;
-    grid-column: 1 / 3 span;
+    margin-left: 11.4vw;
+  }
+  .article_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    justify-content: center;
   }
 }
