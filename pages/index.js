@@ -4,6 +4,7 @@ import Results from "./components/Results";
 import SocialMediaProvider from "./components/SocialMediaProvider";
 
 export default function Home() {
+  const [showResults, setShowResults] = useState(false);
   const [socialMedia, setSocialMedia] = useState([
     {
       name: "YouTube",
@@ -203,6 +204,7 @@ export default function Home() {
       key: "10",
     },
   ]);
+  // console.log(socialMedia);
 
   return (
     <>
@@ -211,10 +213,15 @@ export default function Home() {
           return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
         })}
       </section>
-      <CalculationButton socialMedia={socialMedia}></CalculationButton>
-      <section className="result-container">
-        <Results></Results>
-      </section>
+      <CalculationButton
+        socialMedia={socialMedia}
+        setShowResults={setShowResults}
+      ></CalculationButton>
+      {showResults && (
+        <section className="result-container">
+          <Results socialMedia={socialMedia}></Results>
+        </section>
+      )}
     </>
   );
 }
