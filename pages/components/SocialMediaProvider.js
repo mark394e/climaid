@@ -30,7 +30,6 @@ function SocialMediaProvider(props) {
           </div>
           <p>I reveal {props.emission} kg / CO2 pr. hour</p>
           <div className="slidecontainer">
-            <p>{props.minutes} hours</p>
             <input
               className="slider"
               onChange={handleChange}
@@ -40,6 +39,7 @@ function SocialMediaProvider(props) {
               defaultValue="0"
               step="0.5"
             />
+            <p className="hours">{props.minutes} hours</p>
           </div>
         </article>
       </div>
