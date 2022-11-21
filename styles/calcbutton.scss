@@ -1,0 +1,28 @@
+.clacbutton{
+    display: flex;
+    justify-content: center;
+    background-color:#ffffff ;
+
+    button {
+            background-color: whitesmoke;
+            color: black;
+            // grid-column: 3/4;
+            height: 60px;
+                width: 200px;
+            margin: 2rem;
+           
+            border: none;
+                cursor: pointer;
+                font-family: gambado-sans, sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 2rem;
+        }
+
+             
+        
+                button:hover {
+                    transition: 1s;
+                    background-color: #00cf30;
+                }
+}

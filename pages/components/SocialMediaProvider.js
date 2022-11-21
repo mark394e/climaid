@@ -30,6 +30,7 @@ function SocialMediaProvider(props) {
           </div>
           <div className="slidecontainer">
             <input
+              className="slider"
               onChange={handleChange}
               type="range"
               min="0"

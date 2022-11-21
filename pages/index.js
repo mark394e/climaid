@@ -210,13 +210,21 @@ export default function Home() {
     <>
       <section className="soMeContainer">
         {socialMedia.map((sm) => {
-          return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
+          return (
+            <SocialMediaProvider
+              {...sm}
+              setSocialMedia={setSocialMedia}
+              key={sm.key}
+            />
+          );
         })}
+      </section>
+      <div className="clacbutton">
         <CalculationButton
           socialMedia={socialMedia}
           setShowResults={setShowResults}
         ></CalculationButton>
-      </section>
+      </div>
 
       {showResults && (
         <section className="result-container">
