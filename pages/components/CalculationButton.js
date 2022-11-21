@@ -3,7 +3,21 @@ import { useState } from "react";
 function CalculationButton(props) {
   //   const [result, setResult] = useState([]);
 
-  return <button onClick={() => props.setShowResults(true)}>Click me!</button>;
+  function scroll() {
+    setTimeout(() => {
+      window.scrollTo({ top: 2000, left: 2000, behavior: "smooth" });
+    }, 10);
+  }
+
+  return (
+    <button
+      onClick={() => {
+        props.setShowResults(true), scroll();
+      }}
+    >
+      Click me!
+    </button>
+  );
 }
 
 export default CalculationButton;
