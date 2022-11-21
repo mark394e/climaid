@@ -8,7 +8,7 @@ function Results(props) {
   return (
     <>
       <h2>Resultat</h2>
-      <p>{co2.toFixed(2)} gEqCo2/hr</p>
+      <p>{co2.toFixed(2)} gEqCo2 pr. day</p>
     </>
   );
 }
