@@ -1,4 +1,5 @@
 import React, { useState } from "react"; // <--- import the hook
+import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
 import SocialMediaProvider from "./components/SocialMediaProvider";
 
@@ -210,6 +211,7 @@ export default function Home() {
           return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
         })}
       </section>
+      <CalculationButton socialMedia={socialMedia}></CalculationButton>
       <section className="result-container">
         <Results></Results>
       </section>

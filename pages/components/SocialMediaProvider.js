@@ -14,11 +14,11 @@ function SocialMediaProvider(props) {
         return sm;
       })
     );
-    console.log("value is:", event.target.value);
+    // console.log("value is:", event.target.value);
   };
 
-  // props.minutes = hours;
-  console.log(typeof +hours);
+  // // props.minutes = hours;
+  // console.log(typeof +hours);
 
   return (
     <article className="some-article">
@@ -27,14 +27,7 @@ function SocialMediaProvider(props) {
         <h3>{props.name}</h3>
       </div>
       <div className="slidecontainer">
-        <input
-          onChange={handleChange}
-          type="range"
-          min="0"
-          max="24"
-          defaultValue="0"
-          step="0.5"
-        />
+        <input onChange={handleChange} type="range" min="0" max="24" defaultValue="0" step="0.5" />
       </div>
     </article>
   );
