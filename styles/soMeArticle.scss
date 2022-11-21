@@ -4,13 +4,25 @@
   background-color: rgb(122, 122, 122);
   padding: 2rem;
 
+  .slidecontainer::before {
+    content: "0 hours";
+  }
+
+  .slidecontainer::after {
+    content: "24 hours";
+  }
   .slidecontainer input {
     width: 100%;
+  }
+
+  .slidecontainer {
+    display: flex;
   }
 
   .article-top {
     display: flex;
     flex-direction: column;
+    z-index: 2;
     div {
       align-self: center;
     }

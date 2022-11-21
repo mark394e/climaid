@@ -212,11 +212,12 @@ export default function Home() {
         {socialMedia.map((sm) => {
           return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
         })}
+        <CalculationButton
+          socialMedia={socialMedia}
+          setShowResults={setShowResults}
+        ></CalculationButton>
       </section>
-      <CalculationButton
-        socialMedia={socialMedia}
-        setShowResults={setShowResults}
-      ></CalculationButton>
+
       {showResults && (
         <section className="result-container">
           <Results socialMedia={socialMedia}></Results>
