@@ -29,6 +29,7 @@ function SocialMediaProvider(props) {
             <h3>{props.name}</h3>
           </div>
           <div className="slidecontainer">
+            <p>{props.minutes} hours</p>
             <input
               className="slider"
               onChange={handleChange}
