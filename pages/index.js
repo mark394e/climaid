@@ -211,6 +211,7 @@ export default function Home() {
     <>
       <Header />
       <section className="soMeContainer">
+        <h2>How many hours a day to you spend on...</h2>
         {socialMedia.map((sm) => {
           return (
             <SocialMediaProvider
