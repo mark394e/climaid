@@ -28,6 +28,7 @@ function SocialMediaProvider(props) {
             <div className="logo">{props.logo}</div>
             <h3>{props.name}</h3>
           </div>
+          <p>I reveal {props.emission} kg / CO2 pr. hour</p>
           <div className="slidecontainer">
             <p>{props.minutes} hours</p>
             <input
