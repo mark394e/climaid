@@ -212,15 +212,17 @@ export default function Home() {
       <Header />
       <section className="soMeContainer">
         <h2>How many hours a day to you spend on...</h2>
-        {socialMedia.map((sm) => {
-          return (
-            <SocialMediaProvider
-              {...sm}
-              setSocialMedia={setSocialMedia}
-              key={sm.key}
-            />
-          );
-        })}
+        <div className="article_container">
+          {socialMedia.map((sm) => {
+            return (
+              <SocialMediaProvider
+                {...sm}
+                setSocialMedia={setSocialMedia}
+                key={sm.key}
+              />
+            );
+          })}
+        </div>
       </section>
       <div className="clacbutton">
         <CalculationButton
@@ -228,7 +230,6 @@ export default function Home() {
           setShowResults={setShowResults}
         ></CalculationButton>
       </div>
-
       {showResults && (
         <section className="result-container">
           <Results socialMedia={socialMedia}></Results>
