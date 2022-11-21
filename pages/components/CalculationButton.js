@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 function CalculationButton(props) {
-  //   const [result, setResult] = useState([]);
-
   function scroll() {
     setTimeout(() => {
       window.scrollTo({ top: 2000, left: 2000, behavior: "smooth" });
