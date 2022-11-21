@@ -1,6 +1,8 @@
 @use "./soMeContainer.scss";
 @use "./soMeArticle.scss";
 @use "./results.scss";
+@use "./calcbutton.scss";
+    @import url("https://use.typekit.net/ewa3uty.css");
 
 html,
 body {
@@ -8,6 +10,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+p{
+  line-height: 1.5rem;
 }
 
 a {

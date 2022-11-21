@@ -1,13 +1,9 @@
 .soMeContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
   gap: 2rem;
   padding: 2rem;
-  background-color: #87ceeb;
-  button {
-    background-color: whitesmoke;
-    color: black;
-    grid-column: 3/4;
-    height: 50px;
-  }
+  background-color: #ffffff;
+  justify-content: center;
+
 }
