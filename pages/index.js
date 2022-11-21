@@ -1,6 +1,7 @@
 import React, { useState } from "react"; // <--- import the hook
 import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
+import Header from "./components/Header";
 import SocialMediaProvider from "./components/SocialMediaProvider";
 
 export default function Home() {
@@ -208,9 +209,16 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <section className="soMeContainer">
         {socialMedia.map((sm) => {
-          return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
+          return (
+            <SocialMediaProvider
+              {...sm}
+              setSocialMedia={setSocialMedia}
+              key={sm.key}
+            />
+          );
         })}
         <CalculationButton
           socialMedia={socialMedia}
