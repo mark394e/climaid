@@ -13,15 +13,6 @@
     padding: 1rem;
   }
 
-  .slidecontainer::before {
-    content: "0 hours";
-    text-align: center;
-  }
-
-  .slidecontainer::after {
-    content: "24 hours";
-    text-align: center;
-  }
   .slidecontainer input {
     width: 100%;
   }
