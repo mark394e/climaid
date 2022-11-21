@@ -13,6 +13,15 @@
     padding: 1rem;
   }
 
+  .slidecontainer::before {
+    content: "0 hours";
+    text-align: center;
+  }
+
+  .slidecontainer::after {
+    content: "24 hours";
+    text-align: center;
+  }
   .slidecontainer input {
     width: 100%;
   }
@@ -56,9 +65,8 @@
 
   .article-top {
     display: flex;
-    flex-direction: column;
     z-index: 2;
-    text-align: center;
+    justify-content: center;
     div {
       align-self: center;
     }
