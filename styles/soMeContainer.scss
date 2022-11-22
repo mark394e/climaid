@@ -1,14 +1,20 @@
 .soMeContainer {
+  border-top: 1px solid rgb(21, 19, 57);
+  margin-left: 5%;
+  margin-right: 5%;
+
   h2 {
-    margin-top: 15vh;
-    margin-left: 11.4vw;
+    padding-top: 15vh;
+    margin-left: 8%;
   }
+
   .article_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 250px));
     gap: 2rem;
     padding: 2rem;
-    background-color: #ffffff;
+    // background-color: #ffffff;
     justify-content: center;
   }
 }

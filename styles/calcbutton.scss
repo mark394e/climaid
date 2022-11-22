@@ -1,28 +1,33 @@
-.clacbutton{
-    display: flex;
-    justify-content: center;
-    background-color:#ffffff ;
+.clacbutton {
+  display: flex;
+  justify-content: center;
 
-    button {
-            background-color: whitesmoke;
-            color: black;
-            // grid-column: 3/4;
-            height: 60px;
-                width: 200px;
-            margin: 2rem;
-           
-            border: none;
-                cursor: pointer;
-                font-family: gambado-sans, sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 2rem;
-        }
+  button {
+    background-color: rgb(21, 19, 57);
+    color: whitesmoke;
+    // grid-column: 3/4;
+    height: 60px;
+    width: 200px;
+    margin: 2rem;
+    border-radius: 5px;
 
-             
-        
-                button:hover {
-                    transition: 1s;
-                    background-color: #00cf30;
-                }
+    border: none;
+    cursor: pointer;
+    font-family: gambado-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    -webkit-text-stroke: 1px rgb(21, 19, 57);
+    text-stroke: 1px rgb(21, 19, 57);
+    transition: 0.3s;
+    color: #ffff00;
+    text-shadow: 2px 2px #fcdb33;
+
+    box-shadow: 6px 6px #fcdb33;
+    background-color: rgb(21, 19, 57);
+  }
 }

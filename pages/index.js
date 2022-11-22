@@ -211,6 +211,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      {/* <hr /> */}
       <section className="soMeContainer">
         <h2>How many hours a day to you spend on...</h2>
         <div className="article_container">
