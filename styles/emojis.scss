@@ -1,0 +1,77 @@
+.emojis {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .emoji_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+
+    .scale {
+      animation-name: scaling;
+      animation-duration: 4s;
+    }
+
+    @keyframes scaling {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .falafel {
+      animation-name: scalingFalafel;
+      animation-fill-mode: forwards;
+      animation-duration: 4s;
+    }
+
+    @keyframes scalingFalafel {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(15);
+      }
+    }
+
+    .oat {
+      animation-name: scalingOat;
+      animation-fill-mode: forwards;
+      animation-duration: 4s;
+    }
+
+    @keyframes scalingOat {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(3.6);
+      }
+    }
+
+    .potato {
+      animation-name: scalingPotato;
+      animation-fill-mode: forwards;
+      animation-duration: 4s;
+    }
+
+    @keyframes scalingPotato {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(3.2);
+      }
+    }
+  }
+
+  h4 {
+    text-align: center;
+    padding: 3rem;
+  }
+}

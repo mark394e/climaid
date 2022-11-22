@@ -3,6 +3,7 @@ import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
 import Header from "./components/Header";
 import SocialMediaProvider from "./components/SocialMediaProvider";
+import Emojis from "./components/Emojis";
 
 export default function Home() {
   const [showResults, setShowResults] = useState(false);
@@ -235,6 +236,7 @@ export default function Home() {
           <Results socialMedia={socialMedia}></Results>
         </section>
       )}
+      <Emojis />
     </>
   );
 }
