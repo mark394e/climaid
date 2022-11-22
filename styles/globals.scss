@@ -10,8 +10,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: rgb(218, 225, 255);
   background: linear-gradient(
     216deg,
@@ -56,6 +56,15 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: gambado-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 * {

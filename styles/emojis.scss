@@ -11,8 +11,10 @@
   }
 
   .emoji_container {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     .scale {
@@ -31,6 +33,7 @@
     }
 
     .falafel {
+      margin-top: 5rem;
       animation-name: scalingFalafel;
       animation-fill-mode: forwards;
       animation-duration: 4s;

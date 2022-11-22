@@ -1,8 +1,10 @@
 .result-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
   padding: 2rem;
-  background-color: rgb(218, 238, 223);
+  background-color: rgb(21, 19, 57);
+  color: whitesmoke;
   h3 {
     padding: 0;
   }
@@ -15,6 +17,7 @@
     grid-column: 3/4;
     grid-row: 2/3;
   }
+
   h3 {
     padding: 0;
   }
@@ -26,9 +29,16 @@
     grid-row: 4/5;
     grid-column: 2/3;
   }
+
   h2 {
-    grid-column: 2/4;
+    grid-column: 1/4;
     justify-self: center;
+    -webkit-text-stroke: 1px rgb(21, 19, 57);
+    text-stroke: 1px rgb(21, 19, 57);
+    transition: 0.3s;
+    color: #ffff00;
+    text-shadow: 2px 2px #fcdb33;
+    font-size: 4rem;
   }
 
   .breakline {
