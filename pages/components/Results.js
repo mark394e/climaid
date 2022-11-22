@@ -11,12 +11,12 @@ function Results(props) {
     co2 += element.hours * element.emission;
   });
 
-  const beef = (co2 / 15500).toFixed(2);
-  const falafel = (co2 / 1000).toFixed(2);
-  const oat = (co2 / 880).toFixed(2);
-  const dairy = (co2 / 3200).toFixed(2);
-  const rice = (co2 / 1600).toFixed(2);
-  const potatoes = (co2 / 500).toFixed(2);
+  const beef = (co2 / 15.5).toFixed(2);
+  const falafel = (co2 / 1).toFixed(2);
+  const oat = (co2 / 0.88).toFixed(2);
+  const dairy = (co2 / 3.2).toFixed(2);
+  const rice = (co2 / 1.6).toFixed(2);
+  const potatoes = (co2 / 0.5).toFixed(2);
 
   return (
     <>
@@ -24,7 +24,7 @@ function Results(props) {
       <h2>RESULT</h2>
       <div className="co2day">
         <h3>
-          {co2.toFixed(2)} g. CO<sub>2</sub> a day!
+          {co2.toFixed(2)} kg. CO<sub>2</sub> a day!
         </h3>
         <h4>
           With your CO<sub>2</sub> footprint you can produce...
@@ -60,7 +60,7 @@ function Results(props) {
         <>
           <div className="co2week">
             <h3>
-              {(co2 * 7).toFixed(2)} g. CO<sub>2</sub> a week!
+              {(co2 * 7).toFixed(2)} kg. CO<sub>2</sub> a week!
             </h3>
             <h4>Same as...</h4>
             <div>
@@ -92,7 +92,7 @@ function Results(props) {
           </div>
           <div className="co2month">
             <h3>
-              {(co2 * 30).toFixed(2)} g. CO<sub>2</sub> a month!
+              {(co2 * 30).toFixed(2)} kg. CO<sub>2</sub> a month!
             </h3>
             <h4>Same as...</h4>
             <div>
@@ -126,7 +126,7 @@ function Results(props) {
       )}
       <div className="co2year">
         <h3>
-          {(365 * co2).toFixed(2)} g. CO<sub>2</sub> a year!
+          {(365 * co2).toFixed(2)} kg. CO<sub>2</sub> a year!
         </h3>
         <h4>Same as...</h4>
         <div>

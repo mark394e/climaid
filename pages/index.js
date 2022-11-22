@@ -41,7 +41,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 33,
+      emission: 0.033,
       key: "2",
     },
     {
@@ -59,7 +59,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 36,
+      emission: 0.036,
       key: "3",
     },
     {
@@ -77,7 +77,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 42.6,
+      emission: 0.0426,
       key: "4",
     },
     {
@@ -95,7 +95,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 47.4,
+      emission: 0.0474,
       key: "5",
     },
     {
@@ -117,7 +117,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 52.5,
+      emission: 0.0525,
       key: "6",
     },
     {
@@ -135,7 +135,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 63,
+      emission: 0.063,
       key: "7",
     },
     {
@@ -157,7 +157,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 78,
+      emission: 0.078,
       key: "8",
     },
     {
@@ -179,7 +179,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 148.8,
+      emission: 0.1488,
       key: "9",
     },
     {
@@ -201,7 +201,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 157.8,
+      emission: 0.1578,
       key: "10",
     },
   ]);
