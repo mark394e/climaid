@@ -11,7 +11,7 @@ function CalculationButton(props) {
         props.setShowResults(true), scroll();
       }}
     >
-      Click me!
+      Calculate
     </button>
   );
 }
