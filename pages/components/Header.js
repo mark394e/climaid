@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <h1>So-Me Carbon Calculator</h1>
+      <h1>Choose the climate. Choose ClimAid.</h1>
       <section>
         <p>
           You have heard it before, but it can not be told again:

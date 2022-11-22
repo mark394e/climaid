@@ -1,18 +1,21 @@
 import { useState } from "react";
+import ShowMoreBtn from "./ShowMoreBtn";
 
 function Results(props) {
+  const [showMore, setShowMore] = useState(false);
+
   let co2 = 0;
 
   props.socialMedia.forEach((element) => {
     co2 += element.minutes * element.emission;
   });
 
-  const beef = co2 / 15500;
-  const tofu = co2 / 800;
-  const oat = co2 / 880;
-  const dairy = co2 / 3200;
-  const rice = co2 / 1600;
-  const potatoes = co2 / 500;
+  const beef = (co2 / 15500).toFixed(2);
+  const falafel = (co2 / 1000).toFixed(2);
+  const oat = (co2 / 880).toFixed(2);
+  const dairy = (co2 / 3200).toFixed(2);
+  const rice = (co2 / 1600).toFixed(2);
+  const potatoes = (co2 / 500).toFixed(2);
 
   return (
     <>
@@ -20,76 +23,132 @@ function Results(props) {
       <div className="co2day">
         <h3>{co2.toFixed(2)} g. CO2 a day!</h3>
         <h4>In comparisson</h4>
-        <Produce productName="beef" amount={beef}></Produce>
-        <Produce productName="tofu" amount={tofu}></Produce>
-        <p>
-          {dairy.toFixed(2)} L dairy milk or
-          <br />
-          {oat.toFixed(2)} L oat milk!
-        </p>
-        <p>
-          {rice.toFixed(2)} kg rice or
-          <br />
-          {potatoes.toFixed(2)} kg potatoes!
-        </p>
+        <p> With your co2 footprint you can produce...</p>
+        <div>
+          <Produce
+            productName="beef"
+            amount={beef}
+            productName2="falafel"
+            amount2={falafel}
+          ></Produce>
+        </div>
+        <div className="breakline"></div>
+        <div>
+          <ProduceL
+            productName="dairy milk"
+            amount={dairy}
+            productName2="oat milk"
+            amount2={oat}
+          ></ProduceL>
+        </div>
+        <div className="breakline"></div>
+        <div>
+          <Produce
+            productName="rice"
+            amount={rice}
+            productName2="potatoes"
+            amount2={potatoes}
+          ></Produce>
+        </div>
       </div>
-      <div className="co2week">
-        <h3>{(co2 * 7).toFixed(2)} g. CO2 a week!</h3>
-        <h4>Same as...</h4>
-        <p>
-          {(beef * 7).toFixed(2)} kg beef or
-          <br />
-          {(tofu * 7).toFixed(2)} kg tofu!
-        </p>
-        <p>
-          {(dairy * 7).toFixed(2)} L dairy milk or
-          <br />
-          {(oat * 7).toFixed(2)} L oat milk!
-        </p>
-        <p>
-          {(rice * 7).toFixed(2)} kg rice or
-          <br />
-          {(potatoes * 7).toFixed(2)} kg potatoes!
-        </p>
-      </div>
-      <div className="co2month">
-        <h3>{co2.toFixed(2) * 30} g. CO2 a month!</h3>
-        <h4>Same as...</h4>
-        <p>
-          {(beef * 30).toFixed(2)} kg beef or
-          <br />
-          {(tofu * 30).toFixed(2)} kg tofu!
-        </p>
-        <p>
-          {(dairy * 30).toFixed(2)} L dairy milk or
-          <br />
-          {(oat * 30).toFixed(2)} L oat milk!
-        </p>
-        <p>
-          {(rice * 30).toFixed(2)} kg rice or
-          <br />
-          {(potatoes * 30).toFixed(2)} kg potatoes!
-        </p>
-      </div>
+      {showMore && (
+        <>
+          <div className="co2week">
+            <h3>{(co2 * 7).toFixed(2)} g. CO2 a week!</h3>
+            <h4>Same as...</h4>
+            <p> With your co2 footprint you can produce...</p>
+            <div>
+              <Produce
+                productName="beef"
+                amount={beef * 7}
+                productName2="falafel"
+                amount2={falafel * 7}
+              ></Produce>
+            </div>
+            <div className="breakline"></div>
+            <div>
+              <ProduceL
+                productName="dairy milk"
+                amount={dairy * 7}
+                productName2="oat milk"
+                amount2={oat * 7}
+              ></ProduceL>
+            </div>
+            <div className="breakline"></div>
+            <div>
+              <Produce
+                productName="rice"
+                amount={rice * 7}
+                productName2="potatoes"
+                amount2={potatoes * 7}
+              ></Produce>
+            </div>
+          </div>
+          <div className="co2month">
+            <h3>{(co2 * 30).toFixed(2)} g. CO2 a month!</h3>
+            <h4>Same as...</h4>
+            <p> With your co2 footprint you can produce...</p>
+            <div>
+              <Produce
+                productName="beef"
+                amount={beef * 30}
+                productName2="falafel"
+                amount2={falafel * 30}
+              ></Produce>
+            </div>
+            <div className="breakline"></div>
+            <div>
+              <ProduceL
+                productName="dairy milk"
+                amount={dairy * 30}
+                productName2="oat milk"
+                amount2={oat * 30}
+              ></ProduceL>
+            </div>
+            <div className="breakline"></div>
+            <div>
+              <Produce
+                productName="rice"
+                amount={rice * 30}
+                productName2="potatoes"
+                amount2={potatoes * 30}
+              ></Produce>
+            </div>
+          </div>
+        </>
+      )}
       <div className="co2year">
-        <h3>{365 * co2.toFixed(2)} g. CO2 a year!</h3>
+        <h3>{(365 * co2).toFixed(2)} g. CO2 a year!</h3>
         <h4>Same as...</h4>
-        <p>
-          {(beef * 365).toFixed(2)} kg beef or
-          <br />
-          {(tofu * 365).toFixed(2)} kg tofu!
-        </p>
-        <p>
-          {(dairy * 365).toFixed(2)} L dairy milk or
-          <br />
-          {(oat * 365).toFixed(2)} L oat!
-        </p>
-        <p>
-          {(rice * 365).toFixed(2)} kg rice or
-          <br />
-          {(potatoes * 365).toFixed(2)} kg potatoes!
-        </p>
+        <p> With your co2 footprint you can produce...</p>
+        <div>
+          <Produce
+            productName="beef"
+            amount={beef * 365}
+            productName2="falafel"
+            amount2={falafel * 365}
+          ></Produce>
+        </div>
+        <div className="breakline"></div>
+        <div>
+          <ProduceL
+            productName="dairy milk"
+            amount={dairy * 365}
+            productName2="oat milk"
+            amount2={oat * 365}
+          ></ProduceL>
+        </div>
+        <div className="breakline"></div>
+        <div>
+          <Produce
+            productName="rice"
+            amount={rice * 365}
+            productName2="potatoes"
+            amount2={potatoes * 365}
+          ></Produce>
+        </div>
       </div>
+      <ShowMoreBtn setShowMore={setShowMore} showMore={showMore}></ShowMoreBtn>
     </>
   );
 }
@@ -99,7 +158,15 @@ export default Results;
 function Produce(props) {
   return (
     <p>
-      With your co2 footprint you can produce {props.amount.toFixed(2)}kg of {props.productName}!
+      {props.amount} kg {props.productName} or {props.amount2} kg {props.productName2}.
+    </p>
+  );
+}
+
+function ProduceL(props) {
+  return (
+    <p>
+      {props.amount} L {props.productName} or {props.amount2} L {props.productName2}
     </p>
   );
 }
