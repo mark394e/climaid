@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ShowMoreBtn from "./ShowMoreBtn";
+import Emojis from "./Emojis";
 
 function Results(props) {
   const [showMore, setShowMore] = useState(false);
@@ -19,11 +20,15 @@ function Results(props) {
 
   return (
     <>
+      <Emojis />
       <h2>RESULT</h2>
       <div className="co2day">
-        <h3>{co2.toFixed(2)} g. CO2 a day!</h3>
-        <h4>In comparisson</h4>
-        <p> With your co2 footprint you can produce...</p>
+        <h3>
+          {co2.toFixed(2)} g. CO<sub>2</sub> a day!
+        </h3>
+        <h4>
+          With your CO<sub>2</sub> footprint you can produce...
+        </h4>
         <div>
           <Produce
             productName="beef"
@@ -54,9 +59,10 @@ function Results(props) {
       {showMore && (
         <>
           <div className="co2week">
-            <h3>{(co2 * 7).toFixed(2)} g. CO2 a week!</h3>
+            <h3>
+              {(co2 * 7).toFixed(2)} g. CO<sub>2</sub> a week!
+            </h3>
             <h4>Same as...</h4>
-            <p> With your co2 footprint you can produce...</p>
             <div>
               <Produce
                 productName="beef"
@@ -85,9 +91,10 @@ function Results(props) {
             </div>
           </div>
           <div className="co2month">
-            <h3>{(co2 * 30).toFixed(2)} g. CO2 a month!</h3>
+            <h3>
+              {(co2 * 30).toFixed(2)} g. CO<sub>2</sub> a month!
+            </h3>
             <h4>Same as...</h4>
-            <p> With your co2 footprint you can produce...</p>
             <div>
               <Produce
                 productName="beef"
@@ -118,9 +125,10 @@ function Results(props) {
         </>
       )}
       <div className="co2year">
-        <h3>{(365 * co2).toFixed(2)} g. CO2 a year!</h3>
+        <h3>
+          {(365 * co2).toFixed(2)} g. CO<sub>2</sub> a year!
+        </h3>
         <h4>Same as...</h4>
-        <p> With your co2 footprint you can produce...</p>
         <div>
           <Produce
             productName="beef"

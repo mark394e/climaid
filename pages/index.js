@@ -3,7 +3,6 @@ import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
 import Header from "./components/Header";
 import SocialMediaProvider from "./components/SocialMediaProvider";
-import Emojis from "./components/Emojis";
 
 export default function Home() {
   const [showResults, setShowResults] = useState(false);
@@ -206,7 +205,6 @@ export default function Home() {
       key: "10",
     },
   ]);
-  // console.log(socialMedia);
 
   return (
     <>
@@ -216,13 +214,7 @@ export default function Home() {
         <h2>How many hours a day to you spend on...</h2>
         <div className="article_container">
           {socialMedia.map((sm) => {
-            return (
-              <SocialMediaProvider
-                {...sm}
-                setSocialMedia={setSocialMedia}
-                key={sm.key}
-              />
-            );
+            return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
           })}
         </div>
       </section>
@@ -237,7 +229,6 @@ export default function Home() {
           <Results socialMedia={socialMedia}></Results>
         </section>
       )}
-      <Emojis />
     </>
   );
 }
