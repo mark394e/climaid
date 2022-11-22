@@ -22,7 +22,7 @@ export default function Home() {
         </svg>
       ),
       hours: 0,
-      emission: 27.6,
+      emission: 0.0276,
       key: "1",
     },
     {
