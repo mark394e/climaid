@@ -7,12 +7,12 @@ function Results(props) {
     co2 += element.minutes * element.emission;
   });
 
-  const beef = 15500 / co2;
-  const tofu = 800 / co2;
-  const oat = 880 / co2;
-  const dairy = 3200 / co2;
-  const rice = 1600 / co2;
-  const potatoes = 500 / co2;
+  const beef = co2 / 15500;
+  const tofu = co2 / 800;
+  const oat = co2 / 880;
+  const dairy = co2 / 3200;
+  const rice = co2 / 1600;
+  const potatoes = co2 / 500;
 
   return (
     <>
@@ -20,11 +20,8 @@ function Results(props) {
       <div className="co2day">
         <h3>{co2.toFixed(2)} g. CO2 a day!</h3>
         <h4>In comparisson</h4>
-        <p>
-          It costs {beef.toFixed(2)}kg CO2 to produce 1kg beef!
-          <br />
-          It costs {tofu.toFixed(2)} kg CO2 to produce 1kg tofu!
-        </p>
+        <Produce productName="beef" amount={beef}></Produce>
+        <Produce productName="tofu" amount={tofu}></Produce>
         <p>
           {dairy.toFixed(2)} L dairy milk or
           <br />
@@ -98,3 +95,11 @@ function Results(props) {
 }
 
 export default Results;
+
+function Produce(props) {
+  return (
+    <p>
+      With your co2 footprint you can produce {props.amount.toFixed(2)}kg of {props.productName}!
+    </p>
+  );
+}
