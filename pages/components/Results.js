@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ShowMoreBtn from "./ShowMoreBtn";
+import Emojis from "./Emojis";
 
 function Results(props) {
   const [showMore, setShowMore] = useState(false);
@@ -19,6 +20,7 @@ function Results(props) {
 
   return (
     <>
+      <Emojis />
       <h2>RESULT</h2>
       <div className="co2day">
         <h3>{co2.toFixed(2)} g. CO2 a day!</h3>

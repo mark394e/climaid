@@ -1,18 +1,24 @@
 .emojis {
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-column: 1/2;
+  grid-row: 2/5;
+
+  .falafel-container {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
 
   .emoji_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 30vw;
 
     .scale {
       animation-name: scaling;
       animation-duration: 4s;
+      animation-fill-mode: forwards;
     }
 
     @keyframes scaling {
@@ -20,7 +26,7 @@
         transform: scale(0);
       }
       100% {
-        transform: scale(1);
+        transform: scale(2);
       }
     }
 
@@ -35,7 +41,7 @@
         transform: scale(0);
       }
       100% {
-        transform: scale(15);
+        transform: scale(15.5);
       }
     }
 
@@ -72,6 +78,28 @@
 
   h4 {
     text-align: center;
-    padding: 3rem;
+  }
+
+  .tid {
+    animation-name: tid;
+    animation-duration: 30s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes tid {
+    0% {
+      transform: scaleY(1);
+      background-color: limegreen;
+    }
+
+    50% {
+      background-color: yellow;
+    }
+
+    100% {
+      transform: scaleY(0);
+      background-color: red;
+    }
   }
 }
