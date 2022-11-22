@@ -45,7 +45,7 @@
     .slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 25px;
+      width: 15px;
       height: 25px;
       border-radius: 10%;
       background: url("../public/lightning-icon.svg");
@@ -55,7 +55,7 @@
 
     .slider::-moz-range-thumb {
       content: "🍚";
-      width: 25px;
+      width: 15px;
       height: 25px;
       border-radius: 10%;
       background: url("../public/lightning-icon.svg");

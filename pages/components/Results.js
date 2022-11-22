@@ -1,6 +1,6 @@
 import { useState } from "react";
+import BubbleChart from "./BubbleChart";
 import ShowMoreBtn from "./ShowMoreBtn";
-import Emojis from "./Emojis";
 
 function Results(props) {
   const [showMore, setShowMore] = useState(false);
@@ -20,7 +20,7 @@ function Results(props) {
 
   return (
     <>
-      <Emojis />
+      <BubbleChart></BubbleChart>
       <h2>RESULT</h2>
       <div className="co2day">
         <h3>
