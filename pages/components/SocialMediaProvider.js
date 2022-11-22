@@ -8,17 +8,13 @@ function SocialMediaProvider(props) {
       prevState.map((sm) => {
         if (sm.name === props.name) {
           const newSm = { ...sm };
-          newSm.minutes = Number(event.target.value);
+          newSm.hours = Number(event.target.value);
           return newSm;
         }
         return sm;
       })
     );
-    // console.log("value is:", event.target.value);
   };
-
-  // // props.minutes = hours;
-  // console.log(typeof +hours);
 
   return (
     <>
@@ -41,7 +37,7 @@ function SocialMediaProvider(props) {
               defaultValue="0"
               step="0.5"
             />
-            <p className="hours">{props.minutes} hours</p>
+            <p className="hours">{props.hours} hours</p>
           </div>
         </article>
       </div>

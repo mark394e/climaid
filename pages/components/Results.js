@@ -8,7 +8,7 @@ function Results(props) {
   let co2 = 0;
 
   props.socialMedia.forEach((element) => {
-    co2 += element.minutes * element.emission;
+    co2 += element.hours * element.emission;
   });
 
   const beef = (co2 / 15500).toFixed(2);
