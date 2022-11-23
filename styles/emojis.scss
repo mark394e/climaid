@@ -52,6 +52,7 @@
       animation-name: scalingOat;
       animation-fill-mode: forwards;
       animation-duration: 4s;
+      animation-timing-function: ease-out;
     }
 
     @keyframes scalingOat {
@@ -67,6 +68,7 @@
       animation-name: scalingPotato;
       animation-fill-mode: forwards;
       animation-duration: 4s;
+      animation-timing-function: ease-out;
     }
 
     @keyframes scalingPotato {

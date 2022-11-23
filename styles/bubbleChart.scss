@@ -1,0 +1,83 @@
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#circleContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.scale {
+  animation-name: normalScale;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+}
+
+@keyframes normalScale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+.scale-falafel {
+  animation-name: falafelScaling;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  background-color: white;
+}
+
+@keyframes falafelScaling {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.55);
+  }
+}
+
+.scale-oat {
+  animation-name: oatScaling;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  background-color: aqua;
+  z-index: 2;
+}
+
+@keyframes oatScaling {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.36);
+  }
+}
+
+.scale-potato {
+  animation-name: potatoScaling;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  background-color: burlywood;
+  z-index: 3;
+}
+
+@keyframes potatoScaling {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.32);
+  }
+}
+
+.circle h3 {
+  transform: scale(2.5);
+}
