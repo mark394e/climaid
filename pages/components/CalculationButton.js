@@ -13,7 +13,7 @@ function CalculationButton(props) {
   //Når der klikkes, skal vi scroll
   function scroll() {
     setTimeout(() => {
-      window.scrollTo({ top: 2000, left: 2000, behavior: "smooth" });
+      window.scrollTo({ top: 1700, left: 1700, behavior: "smooth" });
     }, 10);
   }
 
