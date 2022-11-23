@@ -3,6 +3,7 @@ import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
 import Header from "./components/Header";
 import SocialMediaProvider from "./components/SocialMediaProvider";
+import Head from "next/head";
 
 export default function Home() {
   const [showResults, setShowResults] = useState(false);
@@ -208,13 +209,23 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>TBA</title>
+        <link rel="icon" type="image/svg+xml" href="lightning-icon.svg" />
+      </Head>
       <Header />
       {/* <hr /> */}
       <section className="soMeContainer">
         <h2>How many hours a day to you spend on...</h2>
         <div className="article_container">
           {socialMedia.map((sm) => {
-            return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
+            return (
+              <SocialMediaProvider
+                {...sm}
+                setSocialMedia={setSocialMedia}
+                key={sm.key}
+              />
+            );
           })}
         </div>
       </section>
