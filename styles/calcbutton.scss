@@ -4,22 +4,30 @@
   margin-bottom: 5rem;
 
   button {
-    background-color: rgb(21, 19, 57);
-    color: whitesmoke;
     height: 60px;
     width: 200px;
     margin: 2rem;
     border-radius: 5px;
   }
 
-  button:hover {
+  button:disabled {
+    background-color: none;
+    border: 1px solid grey;
+  }
+
+  button:not(:disabled) {
+    transition: 0.5;
+    background-color: rgb(21, 19, 57);
+    color: whitesmoke;
+  }
+
+  button:not(:disabled):hover {
     transform: scale(1.1);
     -webkit-text-stroke: 1px rgb(21, 19, 57);
     text-stroke: 1px rgb(21, 19, 57);
     transition: 0.3s;
     color: #ffff00;
     text-shadow: 2px 2px #fcdb33;
-
     box-shadow: 6px 6px #fcdb33;
     background-color: rgb(21, 19, 57);
   }

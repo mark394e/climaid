@@ -8,6 +8,7 @@ import Head from "next/head";
 
 export default function Home() {
   const [showResults, setShowResults] = useState(false);
+
   const [socialMedia, setSocialMedia] = useState([
     {
       name: "YouTube",
@@ -241,7 +242,8 @@ export default function Home() {
           <Results socialMedia={socialMedia}></Results>
         </section>
       )}
-      <Footer />
+      {/*Da footer skal ændre udseende afhængigt af om resultat vises, modtager det state fra showResult */}
+      <Footer showResults={showResults} />
     </>
   );
 }
