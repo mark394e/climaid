@@ -1,7 +1,9 @@
 export default function Header() {
   return (
     <header>
-      <h1>Choose the climate. Choose ClimAid.</h1>
+      <h1>
+        CO<sub>2</sub> ME
+      </h1>
       <section>
         <p>
           You have heard it before, but it can not be said enough:

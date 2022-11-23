@@ -17,4 +17,11 @@
     // background-color: #ffffff;
     justify-content: center;
   }
+
+  @media (min-width: 800px) {
+    h2 {
+      font-size: 3.5rem;
+      // text-shadow: 5px 5px #fcdb33;
+    }
+  }
 }

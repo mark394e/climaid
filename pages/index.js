@@ -2,6 +2,7 @@ import React, { useState } from "react"; // <--- import the hook
 import CalculationButton from "./components/CalculationButton";
 import Results from "./components/Results";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import SocialMediaProvider from "./components/SocialMediaProvider";
 import Head from "next/head";
 
@@ -216,7 +217,7 @@ export default function Home() {
       <Header />
       {/* <hr /> */}
       <section className="soMeContainer">
-        <h2>How many hours a day to you spend on...</h2>
+        <h2>How many hours a day do you spend on...</h2>
         <div className="article_container">
           {socialMedia.map((sm) => {
             return (
@@ -240,6 +241,7 @@ export default function Home() {
           <Results socialMedia={socialMedia}></Results>
         </section>
       )}
+      <Footer />
     </>
   );
 }

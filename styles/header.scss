@@ -27,4 +27,11 @@ header {
   .bold {
     font-weight: bold;
   }
+
+  @media (min-width: 800px) {
+    h1 {
+      font-size: 7rem;
+      text-shadow: 5px 5px #fcdb33;
+    }
+  }
 }

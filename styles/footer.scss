@@ -1,0 +1,17 @@
+footer {
+  background: rgb(218, 238, 223);
+  background: linear-gradient(
+    0deg,
+    rgba(218, 238, 223, 1) 0%,
+    rgba(25, 19, 57, 1) 76%
+  );
+  padding: 10%;
+
+  p:first-child {
+    padding-top: 30%;
+  }
+
+  p {
+    text-align: center;
+  }
+}
