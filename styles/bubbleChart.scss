@@ -8,9 +8,18 @@
   justify-content: center;
 }
 
+#beefvfalafel,
+#oatvdairy,
+#ricevpotato {
+  display: flex;
+}
+
 #circleContainer {
   display: flex;
   gap: 20px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  flex-direction: column;
 }
 
 .scale {
