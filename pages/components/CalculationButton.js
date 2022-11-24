@@ -16,7 +16,7 @@ function CalculationButton(props) {
     let mobil_viewport = window.matchMedia("(max-width: 600px)");
     if (mobil_viewport.matches) {
       setTimeout(() => {
-        window.scrollTo({ top: 3450, left: 3450, behavior: "smooth" });
+        window.scrollTo({ top: 3350, left: 3350, behavior: "smooth" });
       }, 10);
     } else {
       setTimeout(() => {

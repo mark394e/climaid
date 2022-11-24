@@ -4,9 +4,16 @@ function ShowMoreBtn(props) {
   const [isHidden, setIsHidden] = useState(false);
 
   function scroll() {
-    setTimeout(() => {
-      window.scrollTo({ top: 2200, left: 2200, behavior: "smooth" });
-    }, 10);
+    let mobil_viewport = window.matchMedia("(max-width: 600px)");
+    if (mobil_viewport.matches) {
+      setTimeout(() => {
+        window.scrollTo({ top: 4000, left: 4000, behavior: "smooth" });
+      }, 10);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 2200, left: 2200, behavior: "smooth" });
+      }, 10);
+    }
   }
 
   function toggleHiddenClass() {
