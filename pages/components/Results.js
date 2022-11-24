@@ -23,7 +23,7 @@ function Results(props) {
       {" "}
       <h2>RESULT</h2>
       <div className="result_illustrations">
-        <BubbleChart></BubbleChart>
+        <BubbleChart></BubbleChart>{" "}
         <div className="co2day">
           <h3>
             {co2.toFixed(2)} kg. CO<sub>2</sub> a day!
@@ -165,6 +165,27 @@ function Results(props) {
           ></ShowMoreBtn>
         </div>
       </div>
+      <article className="explanation">
+        <div>
+          <h3>What does it mean?</h3>
+          <h4>
+            The emission pr day might seem small, but in a yearly perspective it
+            is quite high!
+          </h4>
+          <p>
+            For the same amount of CO2 you could have produced several kilos of
+            food yearly! Especially by choosing more green opportunities like
+            falafels over beef and oat- over dairymilk.{" "}
+          </p>
+          <p>
+            It you can not let go your So-Me habits, you can regulate your use
+            of food! Or oppositely: If you can´t let go of beef and dairy milk,
+            minimize your use of So-Me!
+          </p>
+          <h5>Brilliant, isn´t it?</h5>
+        </div>
+        <img src="lightning-icon.svg" />
+      </article>
     </>
   );
 }
