@@ -222,13 +222,7 @@ export default function Home() {
         <h2>How many hours a day do you spend on...</h2>
         <div className="article_container">
           {socialMedia.map((sm) => {
-            return (
-              <SocialMediaProvider
-                {...sm}
-                setSocialMedia={setSocialMedia}
-                key={sm.key}
-              />
-            );
+            return <SocialMediaProvider {...sm} setSocialMedia={setSocialMedia} key={sm.key} />;
           })}
         </div>
       </section>
