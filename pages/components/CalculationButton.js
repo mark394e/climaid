@@ -13,9 +13,16 @@ function CalculationButton(props) {
 
   //Når der klikkes, skal vi scroll
   function scroll() {
-    setTimeout(() => {
-      window.scrollTo({ top: 1700, left: 1700, behavior: "smooth" });
-    }, 10);
+    let mobil_viewport = window.matchMedia("(max-width: 600px)");
+    if (mobil_viewport.matches) {
+      setTimeout(() => {
+        window.scrollTo({ top: 3450, left: 3450, behavior: "smooth" });
+      }, 10);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 1700, left: 1700, behavior: "smooth" });
+      }, 10);
+    }
   }
 
   return (
