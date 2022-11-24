@@ -53,8 +53,12 @@
       cursor: pointer;
     }
 
+    .slider::-webkit-slider-thumb:hover {
+      transition: 0.3s;
+      transform: scale(1.4);
+    }
+
     .slider::-moz-range-thumb {
-      content: "🍚";
       width: 15px;
       height: 25px;
       border-radius: 10%;

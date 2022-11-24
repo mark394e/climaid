@@ -1,13 +1,36 @@
 .clacbutton {
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
 
   button {
     height: 60px;
     width: 200px;
     margin: 2rem;
     border-radius: 5px;
+  }
+
+  .custom-shape-divider-bottom-1669281746 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1669281746 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 103px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom-1669281746 .shape-fill {
+    fill: #151339;
   }
 
   button:disabled {
