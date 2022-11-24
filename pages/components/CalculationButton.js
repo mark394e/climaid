@@ -4,11 +4,18 @@ function CalculationButton(props) {
   const [active, setActive] = useState(true);
 
   //Hvis der ikke er ændret på hours, skal calculation-knappen være inaktiv
-  props.socialMedia.forEach((social) => {
-    if (social.hours > 0 && active) {
-      setActive(false);
-    }
-  });
+
+  const hasHours = (element) => element.hours > 0 && active;
+
+  if (props.socialMedia && props.socialMedia.some(hasHours)) {
+    setActive(false);
+  }
+
+  // props.socialMedia.forEach((social) => {
+  //   if (social.hours > 0 && active) {
+  //     setActive(false);
+  //   }
+  // });
 
   //Når der klikkes, skal vi scroll
   function scroll() {

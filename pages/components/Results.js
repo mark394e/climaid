@@ -7,9 +7,11 @@ function Results(props) {
 
   let co2 = 0;
 
-  props.socialMedia.forEach((element) => {
-    co2 += element.hours * element.emission;
-  });
+  if (props.socialMedia) {
+    props.socialMedia.forEach((element) => {
+      co2 += element.hours * element.emission;
+    });
+  }
 
   const beef = (co2 / 15.5).toFixed(2);
   const falafel = (co2 / 1).toFixed(2);
@@ -159,10 +161,7 @@ function Results(props) {
           </div>
         </div>
         <div className="clickbutton">
-          <ShowMoreBtn
-            setShowMore={setShowMore}
-            showMore={showMore}
-          ></ShowMoreBtn>
+          <ShowMoreBtn setShowMore={setShowMore} showMore={showMore}></ShowMoreBtn>
         </div>
       </div>
     </>
@@ -174,8 +173,7 @@ export default Results;
 function Produce(props) {
   return (
     <p>
-      {props.amount} kg {props.productName} or {props.amount2} kg{" "}
-      {props.productName2}.
+      {props.amount} kg {props.productName} or {props.amount2} kg {props.productName2}.
     </p>
   );
 }
@@ -183,8 +181,7 @@ function Produce(props) {
 function ProduceL(props) {
   return (
     <p>
-      {props.amount} L {props.productName} or {props.amount2} L{" "}
-      {props.productName2}
+      {props.amount} L {props.productName} or {props.amount2} L {props.productName2}
     </p>
   );
 }
