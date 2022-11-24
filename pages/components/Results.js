@@ -181,7 +181,7 @@ function Results(props) {
           </p>
           <h5>Brilliant, isn´t it?</h5>
         </div>
-        <img src="lightning-icon.svg" />
+        <img src="lightning-icon.svg" alt="lyn emoji" />
       </article>
     </>
   );
