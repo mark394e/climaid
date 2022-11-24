@@ -55,31 +55,34 @@
   .result_illustrations {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    column-gap: 2%;
 
     .co2month {
       grid-column: 3/4;
       grid-row: 4/5;
+      max-width: 330px;
     }
     .co2year {
       grid-column: 3/4;
       grid-row: 2/3;
+      max-width: 330px;
     }
 
     .co2day {
       grid-row: 2/4;
       grid-column: 2/3;
+      max-width: 330px;
     }
     .co2week {
       grid-row: 4/5;
       grid-column: 2/3;
+      max-width: 330px;
     }
 
     .clickbutton {
       grid-column: 2/4 span;
       grid-row: 3/5;
       place-self: center;
-      margin-top: 20%;
+      margin-top: 40px;
     }
   }
   .explanation {

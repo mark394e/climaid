@@ -1,11 +1,12 @@
 .circle {
-  height: 200px;
-  width: 200px;
-  background-color: black;
+  height: 150px;
+  width: 150px;
+  background: linear-gradient(345deg, rgba(255, 151, 0, 1) 0%, rgba(255, 255, 0, 1) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 8px 8px 30px rgb(24, 24, 24);
 }
 
 #beefvfalafel,
@@ -14,13 +15,21 @@
   display: flex;
 }
 
+.beef,
+.dairy,
+.rice {
+  z-index: 4;
+}
+
 #circleContainer {
   display: flex;
-  gap: 20px;
+  //   gap: 20px;
   grid-column: 1/2;
-  grid-row: 2/3;
+  grid-row: 2/5;
   flex-direction: column;
-  justify-self: center;
+  //   justify-self: center;
+  margin-top: 20%;
+  margin-left: 20%;
 }
 
 .scale {
@@ -34,7 +43,7 @@
     transform: scale(0);
   }
   100% {
-    transform: scale(0.1);
+    transform: scale(0.5);
   }
 }
 
@@ -42,7 +51,12 @@
   animation-name: falafelScaling;
   animation-fill-mode: forwards;
   animation-duration: 4s;
-  background-color: white;
+  background: linear-gradient(
+    216deg,
+    rgba(218, 225, 255, 1) 0%,
+    rgba(218, 238, 223, 1) 63%,
+    rgba(244, 255, 247, 1) 100%
+  );
 }
 
 @keyframes falafelScaling {
@@ -50,7 +64,7 @@
     transform: scale(0);
   }
   100% {
-    transform: scale(1.55);
+    transform: scale(2.55);
   }
 }
 
@@ -58,7 +72,12 @@
   animation-name: oatScaling;
   animation-fill-mode: forwards;
   animation-duration: 4s;
-  background-color: aqua;
+  background: linear-gradient(
+    216deg,
+    rgba(218, 225, 255, 1) 0%,
+    rgba(218, 238, 223, 1) 63%,
+    rgba(244, 255, 247, 1) 100%
+  );
   z-index: 2;
 }
 
@@ -67,7 +86,7 @@
     transform: scale(0);
   }
   100% {
-    transform: scale(0.36);
+    transform: scale(1.36);
   }
 }
 
@@ -75,7 +94,12 @@
   animation-name: potatoScaling;
   animation-fill-mode: forwards;
   animation-duration: 4s;
-  background-color: burlywood;
+  background: linear-gradient(
+    216deg,
+    rgba(218, 225, 255, 1) 0%,
+    rgba(218, 238, 223, 1) 63%,
+    rgba(244, 255, 247, 1) 100%
+  );
   z-index: 3;
 }
 
@@ -84,7 +108,7 @@
     transform: scale(0);
   }
   100% {
-    transform: scale(0.32);
+    transform: scale(1.92);
   }
 }
 
