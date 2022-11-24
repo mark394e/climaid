@@ -1,117 +1,123 @@
-.circle {
-  height: 150px;
-  width: 150px;
-  background: linear-gradient(345deg, rgba(255, 151, 0, 1) 0%, rgba(255, 255, 0, 1) 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 8px 8px 30px rgb(24, 24, 24);
-}
-
-#beefvfalafel,
-#oatvdairy,
-#ricevpotato {
-  display: flex;
-}
-
-.beef,
-.dairy,
-.rice {
-  z-index: 4;
-}
-
 #circleContainer {
-  display: flex;
-  //   gap: 20px;
-  grid-column: 1/2;
-  grid-row: 2/5;
-  flex-direction: column;
-  //   justify-self: center;
-  margin-top: 20%;
-  margin-left: 20%;
+  display: none;
 }
 
-.scale {
-  animation-name: normalScale;
-  animation-fill-mode: forwards;
-  animation-duration: 4s;
-}
-
-@keyframes normalScale {
-  0% {
-    transform: scale(0);
+@media (min-width: 1200px) {
+  .circle {
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(345deg, rgba(255, 151, 0, 1) 0%, rgba(255, 255, 0, 1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 30px rgb(24, 24, 24);
   }
-  100% {
-    transform: scale(0.5);
-  }
-}
 
-.scale-falafel {
-  animation-name: falafelScaling;
-  animation-fill-mode: forwards;
-  animation-duration: 4s;
-  background: linear-gradient(
-    216deg,
-    rgba(218, 225, 255, 1) 0%,
-    rgba(218, 238, 223, 1) 63%,
-    rgba(244, 255, 247, 1) 100%
-  );
-}
-
-@keyframes falafelScaling {
-  0% {
-    transform: scale(0);
+  #beefvfalafel,
+  #oatvdairy,
+  #ricevpotato {
+    display: flex;
   }
-  100% {
-    transform: scale(2.55);
-  }
-}
 
-.scale-oat {
-  animation-name: oatScaling;
-  animation-fill-mode: forwards;
-  animation-duration: 4s;
-  background: linear-gradient(
-    216deg,
-    rgba(218, 225, 255, 1) 0%,
-    rgba(218, 238, 223, 1) 63%,
-    rgba(244, 255, 247, 1) 100%
-  );
-  z-index: 2;
-}
-
-@keyframes oatScaling {
-  0% {
-    transform: scale(0);
+  .beef,
+  .dairy,
+  .rice {
+    z-index: 4;
   }
-  100% {
-    transform: scale(1.36);
-  }
-}
 
-.scale-potato {
-  animation-name: potatoScaling;
-  animation-fill-mode: forwards;
-  animation-duration: 4s;
-  background: linear-gradient(
-    216deg,
-    rgba(218, 225, 255, 1) 0%,
-    rgba(218, 238, 223, 1) 63%,
-    rgba(244, 255, 247, 1) 100%
-  );
-  z-index: 3;
-}
-
-@keyframes potatoScaling {
-  0% {
-    transform: scale(0);
+  #circleContainer {
+    display: flex;
+    //   gap: 20px;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    flex-direction: column;
+    //   justify-self: center;
+    margin-top: 20%;
+    margin-left: 20%;
   }
-  100% {
-    transform: scale(1.92);
-  }
-}
 
-.circle h3 {
-  transform: scale(2.5);
+  .scale {
+    animation-name: normalScale;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+  }
+
+  @keyframes normalScale {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+
+  .scale-falafel {
+    animation-name: falafelScaling;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    background: linear-gradient(
+      216deg,
+      rgba(218, 225, 255, 1) 0%,
+      rgba(218, 238, 223, 1) 63%,
+      rgba(244, 255, 247, 1) 100%
+    );
+  }
+
+  @keyframes falafelScaling {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(2.55);
+    }
+  }
+
+  .scale-oat {
+    animation-name: oatScaling;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    background: linear-gradient(
+      216deg,
+      rgba(218, 225, 255, 1) 0%,
+      rgba(218, 238, 223, 1) 63%,
+      rgba(244, 255, 247, 1) 100%
+    );
+    z-index: 2;
+  }
+
+  @keyframes oatScaling {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1.36);
+    }
+  }
+
+  .scale-potato {
+    animation-name: potatoScaling;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    background: linear-gradient(
+      216deg,
+      rgba(218, 225, 255, 1) 0%,
+      rgba(218, 238, 223, 1) 63%,
+      rgba(244, 255, 247, 1) 100%
+    );
+    z-index: 3;
+  }
+
+  @keyframes potatoScaling {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1.92);
+    }
+  }
+
+  .circle h3 {
+    transform: scale(2.5);
+  }
 }
