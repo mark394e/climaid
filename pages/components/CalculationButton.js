@@ -11,12 +11,6 @@ function CalculationButton(props) {
     setActive(false);
   }
 
-  // props.socialMedia.forEach((social) => {
-  //   if (social.hours > 0 && active) {
-  //     setActive(false);
-  //   }
-  // });
-
   //Når der klikkes, skal vi scroll
   function scroll() {
     setTimeout(() => {
