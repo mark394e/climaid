@@ -6,14 +6,15 @@
 @use "./emojis.scss";
 @use "./footer.scss";
 @use "./bubbleChart.scss";
+@use "./graphics.scss";
 @import url("https://use.typekit.net/ewa3uty.css");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: rgb(218, 225, 255);
   background: linear-gradient(
     216deg,
